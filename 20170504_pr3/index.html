@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>20170504 Juan Lee</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="capital_game.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100, 400, 700" rel="stylesheet">
+    <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Your code here-->
+    <div class="contents">
+      <h1>Do you know the capital of this country?</h1>
+      <iframe
+        width="500px"
+        height="400px"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDFsU-s1RI5ABA5bSN3QXtIDPiGY9E7N50&maptype=roadmap&language=en&q=kixlab" allowfullscreen>
+      </iframe>
+      <table>
+        <tr class="row-header">
+          <th>Country</th>
+          <th>Capital</th>
+          <th>Answer</th>
+        </tr>
+        <tr>
+          <td id="pr2__question"></td>
+          <td><input id="pr2__answer" type="text" placeholder="Your answer" /></td>
+          <td><button id="pr2__submit" type="button">See answer</button></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <input id="radio-all" type="radio" name="option" checked="checked" value="All" /> All
+            <input id="radio-correct" type="radio" name="option" value="Correct Only" /> Correct Only
+            <input id="radio-wrong" type="radio" name="option" value="Wrong Only" /> Wrong Only
+          </td>
+        </tr>
+        <tr id="answer-form">
+          <td colspan="3">
+            <button id="pr3__undo" type="button" disabled>Undo</button>
+            <button id="pr3__clear" type="button" disabled>Clear</button>
+            <button id="pr3__reset" type="button" disabled>Reset</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDxUevfgM5CJ0EK5eTIG4luik_q9NwK8Nc",
+        authDomain: "cs374-pr3-juan.firebaseapp.com",
+        databaseURL: "https://cs374-pr3-juan.firebaseio.com",
+        projectId: "cs374-pr3-juan",
+        storageBucket: "cs374-pr3-juan.appspot.com",
+        messagingSenderId: "961861140676"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="./capital_game.js"></script>
+  </body>
+</html>

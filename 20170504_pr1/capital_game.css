@@ -1,0 +1,41 @@
+body {
+    background-color: #eee;
+}
+
+/*your code here*/
+body {
+    text-align: center;
+}
+
+.contents {
+    display: inline-block;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border-bottom: 1px solid #c5c5c5;
+    padding: 3px;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    padding: 3px;
+}
+
+.row-correct td {
+    color: green;
+}
+
+.row-incorrect td {
+    color: red;
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
